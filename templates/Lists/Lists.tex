@@ -1,0 +1,154 @@
+% Lists 
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[inline]{enumitem}
+\usepackage{xcolor}
+\usepackage{exsheets}
+\usepackage[ampersand]{easylist}
+\SetupExSheets[question]{type=exam}
+
+\begin{document}
+\section{Simple Lists}
+\subsection{Unordered Lists}
+\begin{itemize}
+	\item A
+	\item B
+	\item C
+\end{itemize}
+
+\subsection{Ordered Lists}
+\begin{enumerate}
+	\item A
+	\item B
+	\item C
+\end{enumerate}
+
+\subsection{Descriptive List}
+\begin{description}
+	\item [Item1] \blindtext
+	\item [Item2] \blindtext
+\end{description}
+
+
+\section{Nested Lists}
+\begin{enumerate}
+	\item One
+	\begin{enumerate}
+		\item Two
+		\item Three
+		\item Four
+	\end{enumerate}
+	\item Five
+	\item Six
+\end{enumerate}
+\subsection{Nested list with different enviroments}
+\begin{enumerate}
+	\item One
+	\begin{enumerate}
+		\item Two
+		\item Three
+		\item Four
+	\end{enumerate}
+	\item Five
+	\begin{itemize}
+		\item A
+		\item B
+		\item C
+	\end{itemize}
+	\item Six
+\end{enumerate}
+
+
+\section{Customized Lists}
+\subsection{Unordered Lists - change bullets}
+\begin{itemize}
+	\item[--] Dash
+	\item[$-$] Dash
+	\item[$\ast$] Asterisk
+	\item[$\alpha$] Alpha
+\end{itemize}
+
+
+\subsection{Ordered Lists}
+\begin{enumerate}[label=(\roman*)]
+	\item One
+	\item Two
+	\item Three
+\end{enumerate}
+\begin{enumerate}[label=(\arabic*)]
+	\item One
+	\item Two
+	\item Three
+\end{enumerate}
+
+\subsection{Change alignment}
+\begin{description}[align=left]
+	\item [A] some detail
+	\item [B]some detail
+	\item [C]some detail
+\end{description}
+
+\begin{description}[align=right]
+	\item [A] some detail
+	\item [B]some detail
+	\item [C]some detail
+\end{description}
+
+\begin{description}[align=right,labelwidth=3cm]
+	\item [A] some detail
+	\item [B]some detail
+	\item [C]some detail
+\end{description}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+	\item One
+	\item Two
+	\item Three
+\end{enumerate}
+
+\section{Funky Lists}
+\subsection{Inline Lists}
+Coco likes fruit. Her favorites are:
+\begin{enumerate*}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+	\item bananas
+	\item apples
+	\item oranges and
+	\item lemons.
+\end{enumerate*}
+
+\subsection{Exam Questions}
+\begin{question}
+	Which one of the entries does not fit with the others?
+	\begin{tasks}(4)
+		\task mercury
+		\task iron
+		\task lead
+		\task zinc
+	\end{tasks}
+\end{question}
+
+\subsection{EasyList}
+\begin{easylist}
+	& Main item~:
+	&& Sub item.
+	&& Another sub item.
+\end{easylist}
+
+\begin{easylist}[itemize]
+	& Main item~:
+	&& Sub item.
+	&& Another sub item.
+\end{easylist}
+
+\subsubsection{Set Lists Properties}
+\begin{easylist}[enumerate]
+	\ListProperties(Style2*=,Numbers=a,Numbers1=R,FinalMark={)})
+	& Main item~:
+	&& Sub item.
+	&& Another sub item.
+\end{easylist}
+
+
+\end{document}
