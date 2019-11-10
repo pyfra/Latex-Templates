@@ -2,7 +2,7 @@
 \documentclass{article}
 \title{Tables}
 \date{}
-
+\usepackage{multirow}
 
 \begin{document}
 	\maketitle
@@ -52,7 +52,7 @@
 	\end{tabular}
 
 	\subsection{Changing space between rows}
-	\begin{table}
+	\begin{table}[t]
 		\renewcommand{\arraystretch}{1.5}
 		\begin{center}
 		\begin{tabular}{ | l | c | r |}
@@ -80,5 +80,70 @@
 		\caption{Table with space 5}
 	\end{table}
 	
+
+\section{Multi-columns}
+\subsection{First Example}
+\begin{center}
+\begin{tabular}{cc|c|c|c|c|l}
+	\cline{3-6}
+	& & \multicolumn{4}{ c| }{Primes} \\ \cline{3-6}
+	& & 2 & 3 & 5 & 7 \\ \cline{1-6}
+	\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+	\multicolumn{1}{ |c| }{504} & 3 & 2 & 0 & 1 &     \\ \cline{2-6}
+	\multicolumn{1}{ |c  }{}                        &
+	\multicolumn{1}{ |c| }{540} & 2 & 3 & 1 & 0 &     \\ \cline{1-6}
+	\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+	\multicolumn{1}{ |c| }{gcd} & 2 & 2 & 0 & 0 & min \\ \cline{2-6}
+	\multicolumn{1}{ |c  }{}                        &
+	\multicolumn{1}{ |c| }{lcm} & 3 & 3 & 1 & 1 & max \\ \cline{1-6}
+\end{tabular}
+\end{center}
+
+\subsection{Second Example}
+\begin{center}
+\begin{tabular}{llr}
+	\hline
+	\multicolumn{2}{c}{Item} \\
+	\cline{1-2}
+	Animal    & Description & Price (\$) \\
+	\hline
+	Gnat      & per gram    & 13.65      \\
+	& each        & 0.01       \\
+	Gnu       & stuffed     & 92.50      \\
+	Emu       & stuffed     & 33.33      \\
+	Armadillo & frozen      & 8.99       \\
+	\hline
+\end{tabular}
+\end{center}
+
+\subsection{Third Example}
+\begin{table}[p]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		\multirow{4}{*}{Surface} & \multirow{4}{*}{Material} & \multicolumn{6}{c|}{Hardness}           \\
+		\cline{3-8}
+		&                    & \multicolumn{2}{c|}{Soft} & \multicolumn{2}{c|}{Medium} & \multicolumn{2}{c|}{Hard} \\
+		\cline{3-8}
+		&                    & \multicolumn{6}{c|}{Factors}                                               \\
+		\cline{3-8}
+		&                           &  A  &   B     &  A   &   B   &   A    &  B     \\
+		\hline
+		\multirow{2}{*}{Base Metal} &    Cast Iron    &  10 &   20    & 30   & 40    &  50    &  60      \\
+		\cline{2-8}
+		&  Steel           &  70 &   80    & 90   & 100   &  110   &  120     \\
+		\hline
+		\multirow{2}{*}{Dressing} &        Cast Iron  & 130 &  140    & 150  &  160  &  170   &  180     \\
+		\cline{2-8}
+		&          Steel            &  170&  160    & 150  &  140  &  130   &  120     \\
+		\hline
+		\multirow{2}{*}{S Dressing} &    Cast Iron    &  110&   100   & 90   & 80    &  70    &  60      \\
+		\cline{2-8}
+		&      Steel                &  50 &  50     & 30   & 20    & 10     &0\\
+		\hline
+	\end{tabular}
+	\caption{Table of Factors for Use in Speed Formulas}
+\end{table}
+
 
 \end{document}
