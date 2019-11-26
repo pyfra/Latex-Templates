@@ -1,0 +1,174 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Writing Mathematics in Latex}
+\date{}
+\author{}
+\begin{document}
+	\maketitle
+	In this document we will learn how to write mathematics in Latex.
+	
+	{\large Note}: :Underscore\textbf{ \_},  hat\textbf{\^ }and fraction symbol \textbf{{$\backslash$frac\{\}\{\}}}are your best friends! when writing math in latex.
+	
+	\section{Inline Math environment} This is an inline $A=\frac{1}{B+C}$. In this case the line spacing will stay the same. This is sometimes better if you want your line spacing not to increase but if you want more visibility, you might consider using the display typesetting such as ${\displaystyle A=\frac{1}{B+C}}$. Here you can notice the difference. The fraction is taking more space and the line spacing has increased. You can see how perfect it looks $\sqrt{a^{2} + b^{2}}$ when we type maths latex. Perfectly scaled and effortlessly!
+	
+	
+	\section{Some Commonly Used Formula Structures}
+	\subsection{Writing Fractions}
+	1. Solve:
+	\[
+	\frac{4}{5}+\frac{7}{13}+3\frac{1}{65}
+	\]
+	\subsection{Exponents and subscripts}
+	Can you see the difference in $2x$, $x_2$, $x^2$, $x_2^2$
+	\subsection{Sums and Products}
+	\[
+	\sum_{i=1}^{n} x_{i}^{2} \qquad \prod_{i=1}^{n} x_{i}^{2}
+	\]
+	\subsection{Multiline Subscripts}
+	\[
+	\sum_{\substack{
+			0\le i\le m\\
+			0<j<n}}^{m,n}
+	X(i,j)
+	\]
+	
+	
+	
+	
+	\subsection{Limit Formula}
+	
+	\[
+	\lim_{x \to a} \frac{f(x) - f(a)}{x - a},
+	\]
+	
+	\subsection{Integrals}
+	\[
+	\int_{0}^{\frac{\pi}{2}} \sin x \, dx = 2 \tag{Any Tag you Want}
+	\]
+	
+	
+	
+	\subsection{Multi-Value Functions:Uses Cases Environment}
+	\[
+	f(x)=
+	\begin{cases}
+	-x^{3}, &\text{if $x < -5$;}\\
+	\theta + 2x, &\text{if $-5 \leq x \leq 0$;}\\
+	x^{4}, &\text{otherwise.}
+	\end{cases}
+	\]
+	
+	\section{Math Environments for Writing Equations}
+	\subsection{Set of Equations:eqnarray Environment}
+	\begin{eqnarray}
+	9000000&=&2x_1+22x_2-333x_3+ ffffffffffffffffff\\
+	900&=&x_1+2x_2+3x_3\\
+	3&=&100x_1-2000x_2-30000x_3
+	\end{eqnarray}
+	
+	\subsection{Split Environment}
+	\begin{equation} \label{eq1}
+	\begin{split}
+	V& = \frac{4\pi r^3}{3} \\
+	& = \frac{4}{3} \pi r^3
+	\end{split}
+	\end{equation}
+	\begin{equation} \label{eq1}
+	\begin{split}
+	L& =a+b+c+d+e+f+g+h \\
+	&+i+j+k+l+m+n+o+p
+	\end{split}
+	\end{equation}
+	
+	\subsection{aligned Environment: Doest not cover full text width, can nest}
+	\begin{equation*}
+		\left.\begin{aligned}
+			K.E.&=\frac{1}{2}mv^2\\
+			PE&=mgh
+		\end{aligned}
+		\right\}
+		\qquad \text{You can Write something Here}
+	\end{equation*}
+	
+	\section{array Environment}
+	
+	\[
+	\begin{array}{ccc}
+	1&2&3\\
+	4&5&6\\
+	7&8&9
+	\end{array}
+	\]
+	\[
+	\begin{array}{|c|c|c|}
+	\hline
+	1&2&3\\
+	4&5&6\\
+	7&8&9\\
+	\hline
+	\end{array}
+	\]
+	\[
+	\begin{array}{c|c|c}
+	
+	1&2&3\\
+	\hline
+	4&5&6\\
+	\hline
+	7&8&9\\
+	
+	\end{array}
+	\]
+	\section{Matrix Environments}
+	\subsection{pmatrix}
+	\[
+	\begin{pmatrix}
+	1&2&3\\
+	4&5&6\\
+	7&8&9
+	\end{pmatrix}
+	\]
+	
+	\subsection{bmatrix}
+	\[
+	\begin{bmatrix}
+	1&2&3\\
+	4&5&6\\
+	7&8&9
+	\end{bmatrix}
+	\]
+	\subsection{Bmatrix}
+	\[
+	\begin{Bmatrix}
+	1&2&3\\
+	4&5&6\\
+	7&8&9
+	\end{Bmatrix}
+	\]
+	\subsection{vmatrix}
+	\[
+	\begin{vmatrix}
+	1&2&3\\
+	4&5&6\\
+	7&8&9
+	\end{vmatrix}
+	\]
+	\subsection{Vmatrix}
+	\[
+	\begin{Vmatrix}
+	1&2&3\\
+	4&5&6\\
+	7&8&9
+	\end{Vmatrix}
+	\]
+	
+	\subsection{Example Matrix with generic Elements}
+	\[\begin{bmatrix}
+	a_{11}&a_{12}&\cdots &a_{1n} \\
+	a_{21}&a_{22}&\cdots &a_{2n} \\
+	\vdots & \vdots & \ddots & \vdots\\
+	a_{n1}&a_{n2}&\cdots &a_{nn}
+	\end{bmatrix}\]
+\end{document}
