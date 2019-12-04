@@ -1,0 +1,43 @@
+\documentclass{article}
+\title{Fonts and Text}
+\usepackage{multicol}
+\usepackage{listings}
+
+\date{}
+\author{}
+\begin{document}
+	\maketitle	
+	\section{Modify Text}
+	\subsection{Emphasize Text}
+	I want to \emph{emphasize} a word. Emph inside emph will un-empahsized the word.	
+	
+	\emph{In this emphasized sentence, there is an emphasized \emph{word} which looks upright.}
+	
+	\textbf{Bold text} may be used to heavily emphasize very important words or phrases.
+	
+	\subsection{Fonts}	
+		\begin{multicols}{3}
+		\begin{itemize}
+			\item \textrm{roman} 
+			\item \textsf{sans serif} 
+			\item \texttt{teletypefont}
+		\end{itemize}
+		\begin{itemize}
+			\item \textit{italic}
+			\item \textsl{slanted}
+			\item \textsc{Small Capital}	
+		\end{itemize}
+	\end{multicols}
+	\subsection{Text Sizing}
+		\begin{itemize}
+			\item \tiny{tiny}
+			\item \scriptsize{scriptsize}
+			\item \footnotesize{footnotesize}	
+			\item \small{small}
+			\item \large{large}
+			\item \Large{Large}	
+			\item \LARGE{LARGE}
+			\item \huge{huge}
+			\item \Huge{Huge}
+		\end{itemize}
+\end{document}
